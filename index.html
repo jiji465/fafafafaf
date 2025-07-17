@@ -271,10 +271,12 @@
                         <i data-lucide="bar-chart-3" class="text-green-700 w-8 h-8 md:w-10 md:h-10"></i>
                     </div>
                     <div class="flex flex-col items-center md:items-start w-full">
-                        <h1 class="font-extrabold text-white text-lg md:text-xl flex items-center gap-1 leading-tight text-center md:text-left w-full">
-                            <span class="truncate">Gilberto Negreiros</span>
-                            <span class="flex-shrink-0"><i data-lucide="award" class="w-4 h-4 md:w-5 md:h-5 text-yellow-300"></i></span>
-                        </h1>
+                        <div class="w-full flex items-center gap-1 overflow-hidden">
+                            <span class="truncate font-extrabold text-white text-lg md:text-xl leading-tight">Gilberto Negreiros</span>
+                            <span class="flex-shrink-0 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award w-4 h-4 md:w-5 md:h-5 text-yellow-300"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                            </span>
+                        </div>
                         <p class="text-xs md:text-sm text-green-100 leading-tight text-center md:text-left w-full truncate">Contabilidade & Consultoria</p>
                         <span class="text-xs text-green-200 font-semibold leading-tight text-center md:text-left w-full truncate">Excelência em Contabilidade</span>
                     </div>
@@ -389,17 +391,17 @@
 
                 <!-- Charts Section -->
                 <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10">
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in min-h-[420px] overflow-x-auto flex flex-col justify-center">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in min-h-[420px] min-w-[320px] max-w-full w-full overflow-x-auto flex flex-col justify-center">
                         <h3 class="text-xl font-bold text-slate-800 mb-4">Valores por Tributo</h3>
-                        <div id="tributeChart" class="w-full h-full min-h-[320px]"></div>
+                        <div id="tributeChart" class="w-full min-w-[320px] min-h-[320px] max-w-full max-h-[500px] mx-auto"></div>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in min-h-[420px] overflow-x-auto flex flex-col justify-center">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in min-h-[420px] min-w-[320px] max-w-full w-full overflow-x-auto flex flex-col justify-center">
                         <h3 class="text-xl font-bold text-slate-800 mb-4">Composição de Status por Tributo</h3>
-                        <div id="statusChart" class="w-full h-full min-h-[320px]"></div>
+                        <div id="statusChart" class="w-full min-w-[320px] min-h-[320px] max-w-full max-h-[500px] mx-auto"></div>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in min-h-[420px] overflow-x-auto flex flex-col justify-center">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in min-h-[420px] min-w-[320px] max-w-full w-full overflow-x-auto flex flex-col justify-center">
                         <h3 class="text-xl font-bold text-slate-800 mb-4">Evolução por Regime</h3>
-                        <div id="regimeChart" class="w-full h-full min-h-[320px]"></div>
+                        <div id="regimeChart" class="w-full min-w-[320px] min-h-[320px] max-w-full max-h-[500px] mx-auto"></div>
                     </div>
                 </section>
 
