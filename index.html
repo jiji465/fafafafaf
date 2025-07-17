@@ -340,6 +340,9 @@
                     </div>
                 </header>
 
+                <!-- Ajuste de espaçamento para garantir que o header não sobreponha o conteúdo -->
+                <div class="h-2"></div>
+
                 <!-- KPIs Section -->
                 <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
                     <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 flex items-start gap-5 hover-lift fade-in">
@@ -386,17 +389,17 @@
 
                 <!-- Charts Section -->
                 <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10">
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in min-h-[420px] overflow-x-auto flex flex-col justify-center">
                         <h3 class="text-xl font-bold text-slate-800 mb-4">Valores por Tributo</h3>
-                        <div id="tributeChart" class="w-full h-full"></div>
+                        <div id="tributeChart" class="w-full h-full min-h-[320px]"></div>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in min-h-[420px] overflow-x-auto flex flex-col justify-center">
                         <h3 class="text-xl font-bold text-slate-800 mb-4">Composição de Status por Tributo</h3>
-                        <div id="statusChart" class="w-full h-full"></div>
+                        <div id="statusChart" class="w-full h-full min-h-[320px]"></div>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in min-h-[420px] overflow-x-auto flex flex-col justify-center">
                         <h3 class="text-xl font-bold text-slate-800 mb-4">Evolução por Regime</h3>
-                        <div id="regimeChart" class="w-full h-full"></div>
+                        <div id="regimeChart" class="w-full h-full min-h-[320px]"></div>
                     </div>
                 </section>
 
