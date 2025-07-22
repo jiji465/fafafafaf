@@ -258,6 +258,37 @@
         .status-badge:hover::before {
             left: 100%;
         }
+
+        /* Melhorias UI/UX para tabela e filtros */
+        #dataTable th, #dataTable td {
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        #dataTable th.active, #dataTable th.sorted {
+            background: #e0f2fe;
+            color: #2563eb;
+        }
+        #dataTable tr:hover {
+            background: #f0fdf4 !important;
+            box-shadow: 0 2px 8px 0 #bbf7d0;
+        }
+        #dataTable td {
+            transition: background 0.2s, color 0.2s;
+        }
+        select:focus, input:focus {
+            outline: 2px solid #22c55e;
+            background: #f0fdf4;
+        }
+        select.active, input.active {
+            border-color: #22c55e;
+            background: #f0fdf4;
+        }
+        @media (max-width: 900px) {
+            #dataTable th, #dataTable td {
+                font-size: 12px;
+                padding: 6px;
+            }
+        }
     </style>
 </head>
 
@@ -423,6 +454,9 @@
                             <select id="statusFilter" class="py-2 px-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-700 focus:border-primary-700 transition-all text-sm hover:border-primary-500">
                                 <option value="">Todas Situações</option>
                             </select>
+                            <select id="dataRestituicaoFilter" class="py-2 px-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-700 focus:border-primary-700 transition-all text-sm hover:border-primary-500">
+                                <option value="">Todas Datas</option>
+                            </select>
                             <button id="clearFiltersBtn" class="bg-slate-200 text-slate-700 font-semibold px-4 py-2 rounded-lg hover:bg-slate-300 transition-all flex items-center gap-2 text-sm hover-lift">
                                 <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Limpar
                             </button>
@@ -437,6 +471,7 @@
                                     <th class="p-4 font-bold uppercase text-slate-500 text-xs tracking-wider cursor-pointer text-right" data-column="valor">Valor<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
                                     <th class="p-4 font-bold uppercase text-slate-500 text-xs tracking-wider cursor-pointer" data-column="regime">Regime<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
                                     <th class="p-4 font-bold uppercase text-slate-500 text-xs tracking-wider cursor-pointer" data-column="perdcomp">PER/DCOMP<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
+                                    <th class="p-4 font-bold uppercase text-slate-500 text-xs tracking-wider cursor-pointer" data-column="dataRestituicao">Data de Restituição<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1110,6 +1145,7 @@
                         regime: document.getElementById('regimeFilter').value,
                         tributo: document.getElementById('tributoFilter').value,
                         status: document.getElementById('statusFilter').value,
+                        dataRestituicao: document.getElementById('dataRestituicaoFilter').value,
                     },
                     sort: sortConfig
                 };
@@ -1124,6 +1160,7 @@
                     document.getElementById('regimeFilter').value = state.filters.regime || '';
                     document.getElementById('tributoFilter').value = state.filters.tributo || '';
                     document.getElementById('statusFilter').value = state.filters.status || '';
+                    document.getElementById('dataRestituicaoFilter').value = state.filters.dataRestituicao || '';
                     sortConfig = state.sort || {
                         column: 'valor',
                         direction: 'desc'
@@ -1137,6 +1174,7 @@
                 document.getElementById('regimeFilter').value = '';
                 document.getElementById('tributoFilter').value = '';
                 document.getElementById('statusFilter').value = '';
+                document.getElementById('dataRestituicaoFilter').value = '';
                 sortConfig = {
                     column: 'valor',
                     direction: 'desc'
@@ -1147,27 +1185,27 @@
             // --- DATA TRANSFORMATION ---
             function processRawData() {
                 // Process Lucro Presumido data
-                const lucroPresumidoData = RAW_DATA.lucroPresumido.map(item => ({ ...item,
-                    regime: 'Lucro Presumido'
+                const lucroPresumidoData = RAW_DATA.lucroPresumido.map(item => ({
+                    ...item,
+                    regime: 'Lucro Presumido',
+                    dataRestituicao: item.situacao === 'RESTITUÍDO' ? '20/06/2025' : ''
                 }));
 
-                // Process Simples Nacional data - todos os processos já estão restituídos
+                // Process Simples Nacional data
                 const simplesNacionalData = [];
                 const sn = RAW_DATA.simplesNacional;
                 sn.data.forEach((item, index) => {
                     const currentPerdcomp = sn.processos[index];
-
-                    // Create a single record for each Simples Nacional process
                     simplesNacionalData.push({
                         tributo: 'SIMPLES NACIONAL',
                         situacao: 'RESTITUÍDO',
                         valor: item.valor,
                         darf: sn.darfs[index] || 'N/A',
                         perdcomp: currentPerdcomp,
-                        regime: 'Simples Nacional'
+                        regime: 'Simples Nacional',
+                        dataRestituicao: '21/07/2025'
                     });
                 });
-
                 masterData = [...lucroPresumidoData, ...simplesNacionalData];
             }
 
@@ -1558,11 +1596,12 @@
                 populateSelect('regimeFilter', getUniqueValues('regime'));
                 populateSelect('tributoFilter', getUniqueValues('tributo'));
                 populateSelect('statusFilter', getUniqueValues('situacao'));
+                populateSelect('dataRestituicaoFilter', getUniqueValues('dataRestituicao').filter(v => v));
             }
 
             function setupEventListeners() {
                 let filterTimeout;
-                document.querySelectorAll('#searchInput, #regimeFilter, #tributoFilter, #statusFilter').forEach(el => {
+                document.querySelectorAll('#searchInput, #regimeFilter, #tributoFilter, #statusFilter, #dataRestituicaoFilter').forEach(el => {
                     el.addEventListener('input', () => {
                         clearTimeout(filterTimeout);
                         filterTimeout = setTimeout(applyFiltersAndRender, 500);
@@ -1598,12 +1637,14 @@
                     regime: document.getElementById('regimeFilter').value,
                     tributo: document.getElementById('tributoFilter').value,
                     status: document.getElementById('statusFilter').value,
+                    dataRestituicao: document.getElementById('dataRestituicaoFilter').value,
                 };
 
                 filteredData = masterData.filter(item => {
                     if (filters.regime && item.regime !== filters.regime) return false;
                     if (filters.tributo && item.tributo !== filters.tributo) return false;
                     if (filters.status && item.situacao !== filters.status) return false;
+                    if (filters.dataRestituicao && item.dataRestituicao !== filters.dataRestituicao) return false;
                     if (filters.search) {
                         const searchStr = String(item.tributo + ' ' + item.situacao + ' ' + item.regime + ' ' + item.perdcomp).toLowerCase();
                         if (!searchStr.includes(filters.search)) return false;
@@ -1791,6 +1832,7 @@
                             <td class="p-4 text-right font-mono text-sm text-slate-600">${formatCurrency(item.valor)}</td>
                             <td class="p-4 text-sm text-slate-600">${item.regime}</td>
                             <td class="p-4 font-mono text-xs text-slate-500">${item.perdcomp}</td>
+                            <td class="p-4 text-xs text-slate-600">${item.dataRestituicao || '-'}</td>
                         </tr>
                     `;
                 }).join('');
