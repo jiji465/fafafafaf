@@ -258,61 +258,6 @@
         .status-badge:hover::before {
             left: 100%;
         }
-
-        /* Melhorias UI/UX para tabela e filtros */
-        #dataTable th, #dataTable td {
-            vertical-align: middle;
-            white-space: nowrap;
-        }
-        #dataTable th.active, #dataTable th.sorted {
-            background: #e0f2fe;
-            color: #2563eb;
-        }
-        #dataTable tr:hover {
-            background: #f0fdf4 !important;
-            box-shadow: 0 2px 8px 0 #bbf7d0;
-        }
-        #dataTable td {
-            transition: background 0.2s, color 0.2s;
-        }
-        select:focus, input:focus {
-            outline: 2px solid #22c55e;
-            background: #f0fdf4;
-        }
-        select.active, input.active {
-            border-color: #22c55e;
-            background: #f0fdf4;
-        }
-        @media (max-width: 900px) {
-            #dataTable th, #dataTable td {
-                font-size: 12px;
-                padding: 6px;
-            }
-            #dataTable {
-                display: block;
-                overflow-x: auto;
-                width: 100%;
-            }
-            #dataTable thead, #dataTable tbody, #dataTable tr {
-                display: table;
-                width: 100%;
-                table-layout: fixed;
-            }
-            #dataTable th, #dataTable td {
-                white-space: normal;
-                word-break: break-word;
-            }
-        }
-        @media (max-width: 600px) {
-            #dataTable th, #dataTable td {
-                font-size: 10px;
-                padding: 4px;
-            }
-            .status-badge {
-                font-size: 9px;
-                padding: 2px 6px;
-            }
-        }
     </style>
 </head>
 
@@ -323,64 +268,64 @@
             <div class="h-32 flex items-center border-b border-slate-200/80 px-4 md:px-6 bg-gradient-to-r from-green-700/90 to-green-900/90 rounded-br-3xl shadow-md">
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 w-full">
                     <div class="bg-white p-1.5 rounded-full shadow-lg flex-shrink-0">
-                        <i data-lucide="bar-chart-3" class="text-green-700 w-8 h-8 md:w-10 md:h-10"></i>
+                        <i data-lucide="bar-chart-3" class="w-6 h-6 text-green-700 md:w-10 md:h-10"></i>
                     </div>
                     <div class="flex flex-col items-center md:items-start w-full">
-                        <div class="w-full flex flex-wrap items-center gap-1 overflow-hidden">
-                            <span class="font-extrabold text-white text-lg md:text-xl leading-tight">Gilberto Negreiros</span>
-                            <span class="flex-shrink-0 flex items-center w-4 h-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award w-4 h-4 text-yellow-300"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                        <div class="flex w-full flex-wrap items-center gap-1 overflow-hidden">
+                            <span class="font-extrabold text-white text-lg leading-tight md:text-xl">Gilberto Negreiros</span>
+                            <span class="flex h-4 w-4 flex-shrink-0 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award h-4 w-4 text-yellow-300"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
                             </span>
                         </div>
-                        <p class="text-xs md:text-sm text-green-100 leading-tight text-center md:text-left w-full truncate">Contabilidade & Consultoria</p>
-                        <span class="text-xs text-green-200 font-semibold leading-tight text-center md:text-left w-full truncate">Excelência em Contabilidade</span>
+                        <p class="w-full truncate text-center text-xs leading-tight text-green-100 md:text-left md:text-sm">Contabilidade & Consultoria</p>
+                        <span class="w-full truncate text-center text-xs font-semibold leading-tight text-green-200 md:text-left">Excelência em Contabilidade</span>
                     </div>
                 </div>
             </div>
             <div class="flex-1 px-6 py-8">
-                <h2 class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Portal do Cliente</h2>
+                <h2 class="mb-4 text-xs font-semibold uppercase tracking-widest text-slate-400">Portal do Cliente</h2>
                 <div class="space-y-6">
                     <div class="flex items-start gap-4">
-                        <i data-lucide="user-circle-2" class="w-10 h-10 text-primary-700 flex-shrink-0"></i>
+                        <i data-lucide="user-circle-2" class="h-10 w-10 flex-shrink-0 text-primary-700"></i>
                         <div>
-                            <p class="font-bold text-slate-800 leading-tight">M MAIA VIEIRA</p>
-                            <p class="text-sm text-slate-500 font-mono">22.123.908/0001-25</p>
+                            <p class="font-bold leading-tight text-slate-800">M MAIA VIEIRA</p>
+                            <p class="font-mono text-sm text-slate-500">22.123.908/0001-25</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
-                        <i data-lucide="shield-check" class="w-10 h-10 text-primary-700 flex-shrink-0"></i>
+                        <i data-lucide="shield-check" class="h-10 w-10 flex-shrink-0 text-primary-700"></i>
                         <div>
-                            <p class="font-bold text-slate-800 leading-tight">Painel de Controle</p>
+                            <p class="font-bold leading-tight text-slate-800">Painel de Controle</p>
                             <p class="text-sm text-slate-500">Recuperação Fiscal</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="px-6 py-6 border-t border-slate-200/80">
-                <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">Suporte</h3>
+            <div class="border-t border-slate-200/80 px-6 py-6">
+                <h3 class="mb-4 text-xs font-semibold uppercase tracking-widest text-slate-400">Suporte</h3>
                 <div class="space-y-3 text-sm">
-                    <a href="tel:+5598984812012" class="flex items-center gap-3 text-slate-600 hover:text-primary-700 font-medium group">
-                        <i data-lucide="phone" class="w-4 h-4 text-slate-400 group-hover:text-primary-700 transition-colors"></i>
+                    <a href="tel:+5598984812012" class="group flex items-center gap-3 font-medium text-slate-600 transition-colors hover:text-primary-700">
+                        <i data-lucide="phone" class="h-4 w-4 text-slate-400 transition-colors group-hover:text-primary-700"></i>
                         <span>(98) 98481-2012</span>
                     </a>
-                    <a href="mailto:gnsjrcont@outlook.com" class="flex items-center gap-3 text-slate-600 hover:text-primary-700 font-medium group">
-                        <i data-lucide="mail" class="w-4 h-4 text-slate-400 group-hover:text-primary-700 transition-colors"></i>
+                    <a href="mailto:gnsjrcont@outlook.com" class="group flex items-center gap-3 font-medium text-slate-600 transition-colors hover:text-primary-700">
+                        <i data-lucide="mail" class="h-4 w-4 text-slate-400 transition-colors group-hover:text-primary-700"></i>
                         <span>gnsjrcont@outlook.com</span>
                     </a>
-                    <a href="https://wa.me/5598984812012" target="_blank" class="flex items-center gap-3 text-white bg-green-500 hover:bg-green-600 font-bold px-4 py-2 rounded-lg transition-all shadow-md mt-2 animate-pulse">
-                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <a href="https://wa.me/5598984812012" target="_blank" class="animate-pulse flex items-center gap-3 rounded-lg bg-green-500 px-4 py-2 font-bold text-white shadow-md transition-all hover:bg-green-600">
+                        <i data-lucide="message-circle" class="h-4 w-4"></i>
                         WhatsApp
                     </a>
                 </div>
                 <div class="mt-4 flex items-center gap-2">
-                    <i data-lucide="shield-check" class="w-4 h-4 text-green-700"></i>
-                    <span class="text-xs text-green-700 font-semibold">CRC-MA 016106</span>
+                    <i data-lucide="shield-check" class="h-4 w-4 text-green-700"></i>
+                    <span class="text-xs font-semibold text-green-700">CRC-MA 016106</span>
                 </div>
             </div>
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 overflow-y-auto relative">
+        <main class="relative flex-1 overflow-y-auto">
             <!-- Loading Overlay -->
             <div x-show="loading" x-transition.opacity class="loading-overlay" :class="{ 'active': loading }">
                 <div class="spinner"></div>
@@ -389,10 +334,10 @@
             <div class="p-6 sm:p-10">
                 <!-- Header -->
                 <header class="mb-10">
-                    <div class="flex justify-between items-center flex-wrap gap-4">
+                    <div class="flex flex-wrap items-center justify-between gap-4">
                         <div>
-                            <h1 class="text-4xl font-extrabold text-slate-800 tracking-tight">Painel de Recuperação Fiscal</h1>
-                            <p class="text-slate-500 mt-1 text-lg">Visão geral dos processos de recuperação tributária.</p>
+                            <h1 class="text-4xl font-extrabold tracking-tight text-slate-800">Painel de Recuperação Fiscal</h1>
+                            <p class="mt-1 text-lg text-slate-500">Visão geral dos processos de recuperação tributária.</p>
                         </div>
                     </div>
                 </header>
@@ -401,88 +346,88 @@
                 <div class="h-2"></div>
 
                 <!-- KPIs Section -->
-                <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 flex items-start gap-5 hover-lift fade-in">
-                        <div class="bg-slate-100 text-slate-500 rounded-lg h-12 w-12 flex-shrink-0 flex items-center justify-center">
-                            <i data-lucide="coins" class="w-6 h-6"></i>
+                <section class="mb-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+                    <div class="hover-lift fade-in flex items-start gap-5 rounded-xl border border-slate-200/80 bg-white p-6 shadow-sm">
+                        <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-500">
+                            <i data-lucide="coins" class="h-6 w-6"></i>
                         </div>
                         <div>
-                            <p class="text-sm font-semibold text-slate-500 mb-1">Total Geral Apurado</p>
+                            <p class="mb-1 text-sm font-semibold text-slate-500">Total Geral Apurado</p>
                             <p class="text-3xl font-bold text-slate-800" id="kpi-geral-valor">R$ 0,00</p>
-                            <p class="text-slate-400 font-medium text-xs mt-1" id="kpi-geral-proc">0 processos</p>
+                            <p class="mt-1 text-xs font-medium text-slate-400" id="kpi-geral-proc">0 processos</p>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 flex items-start gap-5 hover-lift fade-in">
-                        <div class="bg-emerald-100 text-emerald-600 rounded-lg h-12 w-12 flex-shrink-0 flex items-center justify-center">
-                            <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                    <div class="hover-lift fade-in flex items-start gap-5 rounded-xl border border-slate-200/80 bg-white p-6 shadow-sm">
+                        <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-100 text-emerald-600">
+                            <i data-lucide="check-circle-2" class="h-6 w-6"></i>
                         </div>
                         <div>
-                            <p class="text-sm font-semibold text-slate-500 mb-1">Total Restituído</p>
+                            <p class="mb-1 text-sm font-semibold text-slate-500">Total Restituído</p>
                             <p class="text-3xl font-bold text-emerald-600" id="kpi-restituido-valor">R$ 0,00</p>
-                            <p class="text-slate-400 font-medium text-xs mt-1" id="kpi-restituido-proc">0 processos</p>
+                            <p class="mt-1 text-xs font-medium text-slate-400" id="kpi-restituido-proc">0 processos</p>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 flex items-start gap-5 hover-lift fade-in">
-                        <div class="bg-amber-100 text-amber-600 rounded-lg h-12 w-12 flex-shrink-0 flex items-center justify-center">
-                            <i data-lucide="clock" class="w-6 h-6"></i>
+                    <div class="hover-lift fade-in flex items-start gap-5 rounded-xl border border-slate-200/80 bg-white p-6 shadow-sm">
+                        <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-600">
+                            <i data-lucide="clock" class="h-6 w-6"></i>
                         </div>
                         <div>
-                            <p class="text-sm font-semibold text-slate-500 mb-1">Valor Pendente</p>
+                            <p class="mb-1 text-sm font-semibold text-slate-500">Valor Pendente</p>
                             <p class="text-3xl font-bold text-amber-600" id="kpi-pendente-valor">R$ 0,00</p>
-                            <p class="text-slate-400 font-medium text-xs mt-1" id="kpi-pendente-proc">0 processos</p>
+                            <p class="mt-1 text-xs font-medium text-slate-400" id="kpi-pendente-proc">0 processos</p>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 flex items-start gap-5 hover-lift fade-in">
-                        <div class="bg-primary-100 text-primary-700 rounded-lg h-12 w-12 flex-shrink-0 flex items-center justify-center">
-                            <i data-lucide="percent" class="w-6 h-6"></i>
+                    <div class="hover-lift fade-in flex items-start gap-5 rounded-xl border border-slate-200/80 bg-white p-6 shadow-sm">
+                        <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary-100 text-primary-700">
+                            <i data-lucide="percent" class="h-6 w-6"></i>
                         </div>
                         <div>
-                            <p class="text-sm font-semibold text-slate-500 mb-1">Taxa de Sucesso</p>
+                            <p class="mb-1 text-sm font-semibold text-slate-500">Taxa de Sucesso</p>
                             <p class="text-3xl font-bold text-primary-700" id="kpi-success-rate">0%</p>
-                            <p class="text-slate-400 font-medium text-xs mt-1">Baseado em nº de processos</p>
+                            <p class="mt-1 text-xs font-medium text-slate-400">Baseado em nº de processos</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Charts Section -->
-                <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10">
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in min-h-[420px] min-w-[320px] max-w-full w-full overflow-x-auto flex flex-col justify-center">
-                        <h3 class="text-xl font-bold text-slate-800 mb-4">Valores por Tributo</h3>
-                        <div id="tributeChart" class="w-full min-w-[320px] min-h-[320px] max-w-full max-h-[500px] mx-auto"></div>
+                <section class="mb-10 grid grid-cols-1 gap-6 lg:grid-cols-12">
+                    <div class="chart-container hover-lift fade-in col-span-1 flex min-h-[420px] min-w-[320px] max-w-full flex-col justify-center overflow-x-auto rounded-xl border border-slate-200/80 bg-white p-6 shadow-sm lg:col-span-4">
+                        <h3 class="mb-4 text-xl font-bold text-slate-800">Valores por Tributo</h3>
+                        <div id="tributeChart" class="mx-auto w-full min-w-[320px] min-h-[320px] max-w-full max-h-[500px]"></div>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in min-h-[420px] min-w-[320px] max-w-full w-full overflow-x-auto flex flex-col justify-center">
-                        <h3 class="text-xl font-bold text-slate-800 mb-4">Composição de Status por Tributo</h3>
-                        <div id="statusChart" class="w-full min-w-[320px] min-h-[320px] max-w-full max-h-[500px] mx-auto"></div>
+                    <div class="chart-container hover-lift fade-in col-span-1 flex min-h-[420px] min-w-[320px] max-w-full flex-col justify-center overflow-x-auto rounded-xl border border-slate-200/80 bg-white p-6 shadow-sm lg:col-span-4">
+                        <h3 class="mb-4 text-xl font-bold text-slate-800">Composição de Status por Tributo</h3>
+                        <div id="statusChart" class="mx-auto w-full min-w-[320px] min-h-[320px] max-w-full max-h-[500px]"></div>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/80 col-span-1 lg:col-span-4 chart-container hover-lift fade-in min-h-[420px] min-w-[320px] max-w-full w-full overflow-x-auto flex flex-col justify-center">
-                        <h3 class="text-xl font-bold text-slate-800 mb-4">Evolução por Regime</h3>
-                        <div id="regimeChart" class="w-full min-w-[320px] min-h-[320px] max-w-full max-h-[500px] mx-auto"></div>
+                    <div class="chart-container hover-lift fade-in col-span-1 flex min-h-[420px] min-w-[320px] max-w-full flex-col justify-center overflow-x-auto rounded-xl border border-slate-200/80 bg-white p-6 shadow-sm lg:col-span-4">
+                        <h3 class="mb-4 text-xl font-bold text-slate-800">Evolução por Regime</h3>
+                        <div id="regimeChart" class="mx-auto w-full min-w-[320px] min-h-[320px] max-w-full max-h-[500px]"></div>
                     </div>
                 </section>
 
                 <!-- Detailed Table Section -->
-                <section class="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-slate-200/80 hover-lift fade-in">
-                    <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+                <section class="hover-lift fade-in rounded-xl border border-slate-200/80 bg-white p-6 shadow-sm sm:p-8">
+                    <div class="mb-6 flex flex-col items-center justify-between gap-4 md:flex-row">
                         <h3 class="text-2xl font-bold text-slate-800">Consulta Detalhada de Processos</h3>
-                        <div class="flex items-center gap-2 flex-wrap justify-center">
+                        <div class="flex flex-wrap items-center justify-center gap-2">
                             <div class="relative">
-                                <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4"></i>
-                                <input type="text" id="searchInput" placeholder="Pesquisar..." class="w-full md:w-40 pl-9 pr-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-700 focus:border-primary-700 transition-all text-sm hover:border-primary-500">
+                                <i data-lucide="search" class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"></i>
+                                <input type="text" id="searchInput" placeholder="Pesquisar..." class="hover:border-primary-500 w-full rounded-lg border border-slate-300 pl-9 pr-3 py-2 text-sm transition-all focus:border-primary-700 focus:ring-2 focus:ring-primary-700 md:w-40">
                             </div>
-                            <select id="regimeFilter" class="py-2 px-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-700 focus:border-primary-700 transition-all text-sm hover:border-primary-500">
+                            <select id="regimeFilter" class="hover:border-primary-500 rounded-lg border border-slate-300 px-3 py-2 text-sm transition-all focus:border-primary-700 focus:ring-2 focus:ring-primary-700">
                                 <option value="">Todos Regimes</option>
                             </select>
-                            <select id="tributoFilter" class="py-2 px-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-700 focus:border-primary-700 transition-all text-sm hover:border-primary-500">
+                            <select id="tributoFilter" class="hover:border-primary-500 rounded-lg border border-slate-300 px-3 py-2 text-sm transition-all focus:border-primary-700 focus:ring-2 focus:ring-primary-700">
                                 <option value="">Todos Tributos</option>
                             </select>
-                            <select id="statusFilter" class="py-2 px-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-700 focus:border-primary-700 transition-all text-sm hover:border-primary-500">
+                            <select id="statusFilter" class="hover:border-primary-500 rounded-lg border border-slate-300 px-3 py-2 text-sm transition-all focus:border-primary-700 focus:ring-2 focus:ring-primary-700">
                                 <option value="">Todas Situações</option>
                             </select>
-                            <select id="dataRestituicaoFilter" class="py-2 px-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-700 focus:border-primary-700 transition-all text-sm hover:border-primary-500">
+                            <select id="dateFilter" class="hover:border-primary-500 rounded-lg border border-slate-300 px-3 py-2 text-sm transition-all focus:border-primary-700 focus:ring-2 focus:ring-primary-700">
                                 <option value="">Todas Datas</option>
                             </select>
-                            <button id="clearFiltersBtn" class="bg-slate-200 text-slate-700 font-semibold px-4 py-2 rounded-lg hover:bg-slate-300 transition-all flex items-center gap-2 text-sm hover-lift">
-                                <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Limpar
+                            <button id="clearFiltersBtn" class="hover-lift flex items-center gap-2 rounded-lg bg-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition-all hover:bg-slate-300">
+                                <i data-lucide="rotate-ccw" class="h-4 w-4"></i> Limpar
                             </button>
                         </div>
                     </div>
@@ -490,21 +435,21 @@
                         <table id="dataTable" class="w-full text-left">
                             <thead class="bg-slate-100">
                                 <tr>
-                                    <th class="p-4 font-bold uppercase text-slate-500 text-xs tracking-wider cursor-pointer" data-column="tributo">Tributo<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
-                                    <th class="p-4 font-bold uppercase text-slate-500 text-xs tracking-wider cursor-pointer" data-column="situacao">Status<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
-                                    <th class="p-4 font-bold uppercase text-slate-500 text-xs tracking-wider cursor-pointer text-right" data-column="valor">Valor<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
-                                    <th class="p-4 font-bold uppercase text-slate-500 text-xs tracking-wider cursor-pointer" data-column="regime">Regime<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
-                                    <th class="p-4 font-bold uppercase text-slate-500 text-xs tracking-wider cursor-pointer" data-column="perdcomp">PER/DCOMP<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
-                                    <th class="p-4 font-bold uppercase text-slate-500 text-xs tracking-wider cursor-pointer" data-column="dataRestituicao">Data de Restituição<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
+                                    <th class="cursor-pointer p-4 text-xs font-bold uppercase tracking-wider text-slate-500" data-column="tributo">Tributo<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
+                                    <th class="cursor-pointer p-4 text-xs font-bold uppercase tracking-wider text-slate-500" data-column="situacao">Status<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
+                                    <th class="cursor-pointer p-4 text-right text-xs font-bold uppercase tracking-wider text-slate-500" data-column="valor">Valor<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
+                                    <th class="cursor-pointer p-4 text-xs font-bold uppercase tracking-wider text-slate-500" data-column="regime">Regime<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
+                                    <th class="cursor-pointer p-4 text-xs font-bold uppercase tracking-wider text-slate-500" data-column="perdcomp">PER/DCOMP<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
+                                    <th class="cursor-pointer p-4 text-xs font-bold uppercase tracking-wider text-slate-500" data-column="dataRestituicao">Data Restituição<i data-lucide="arrow-up-down" class="sort-icon"></i></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <!-- Data rows will be injected here by JavaScript -->
                             </tbody>
                         </table>
-                        <div id="no-results" class="hidden text-center p-10 text-slate-500">
-                            <i data-lucide="inbox" class="mx-auto w-12 h-12 mb-4 text-slate-300"></i>
-                            <p class="font-semibold text-lg">Nenhum resultado encontrado.</p>
+                        <div id="no-results" class="hidden p-10 text-center text-slate-500">
+                            <i data-lucide="inbox" class="mx-auto mb-4 h-12 w-12 text-slate-300"></i>
+                            <p class="text-lg font-semibold">Nenhum resultado encontrado.</p>
                             <p class="text-sm">Tente ajustar seus filtros ou limpar a pesquisa.</p>
                         </div>
                     </div>
@@ -522,571 +467,666 @@
                     "situacao": "RESTITUÍDO",
                     "darf": "7012229121217200'",
                     "valor": 3315.61,
-                    "perdcomp": "00756.48251.270325.1.2.04-9198"
+                    "perdcomp": "00756.48251.270325.1.2.04-9198",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012430915761540'",
                     "valor": 707.58,
-                    "perdcomp": "01123.20375.270325.1.2.04-8100"
+                    "perdcomp": "01123.20375.270325.1.2.04-8100",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012214363544906'",
                     "valor": 3767.31,
-                    "perdcomp": "01478.67600.270325.1.2.04-9929"
+                    "perdcomp": "01478.67600.270325.1.2.04-9929",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707903057444'",
                     "valor": 4131.76,
-                    "perdcomp": "01917.88040.270325.1.2.04-3110"
+                    "perdcomp": "01917.88040.270325.1.2.04-3110",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "IRPJ DIVIDA ATIVA",
                     "situacao": "PENDENTE",
                     "darf": "7172119401705415'",
                     "valor": 548.03,
-                    "perdcomp": "01977.08057.280325.1.2.04-8129"
+                    "perdcomp": "01977.08057.280325.1.2.04-8129",
+                    "dataRestituicao": null
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162132724254884'",
                     "valor": 894.61,
-                    "perdcomp": "02472.31484.270325.1.2.04-7443"
+                    "perdcomp": "02472.31484.270325.1.2.04-7443",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707788115120'",
                     "valor": 688.08,
-                    "perdcomp": "03138.86854.270325.1.2.04-4579"
+                    "perdcomp": "03138.86854.270325.1.2.04-4579",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123708007139760'",
                     "valor": 730.33,
-                    "perdcomp": "04783.25381.270325.1.2.04-1696"
+                    "perdcomp": "04783.25381.270325.1.2.04-1696",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10100406136000547'",
                     "valor": 3657.39,
-                    "perdcomp": "05196.88078.270325.1.2.04-7755"
+                    "perdcomp": "05196.88078.270325.1.2.04-7755",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012414166750344'",
                     "valor": 720.91,
-                    "perdcomp": "05582.40983.270325.1.2.04-9158"
+                    "perdcomp": "05582.40983.270325.1.2.04-9158",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012211207374786'",
                     "valor": 3422.03,
-                    "perdcomp": "06294.00981.270325.1.2.04-7696"
+                    "perdcomp": "06294.00981.270325.1.2.04-7696",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012435569965082'",
                     "valor": 2921,
-                    "perdcomp": "06315.17916.270325.1.2.04-3780"
+                    "perdcomp": "06315.17916.270325.1.2.04-3780",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012417325733273'",
                     "valor": 627.57,
-                    "perdcomp": "06495.71284.270325.1.2.04-1089"
+                    "perdcomp": "06495.71284.270325.1.2.04-1089",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162303952176933'",
                     "valor": 553.56,
-                    "perdcomp": "07011.86861.270325.1.2.04-7230"
+                    "perdcomp": "07011.86861.270325.1.2.04-7230",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707836139966'",
                     "valor": 976.75,
-                    "perdcomp": "07645.60732.270325.1.2.04-9223"
+                    "perdcomp": "07645.60732.270325.1.2.04-9223",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012414166747823'",
                     "valor": 3327.27,
-                    "perdcomp": "07900.99048.270325.1.2.04-0673"
+                    "perdcomp": "07900.99048.270325.1.2.04-0673",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012211207375073'",
                     "valor": 741.44,
-                    "perdcomp": "08248.31024.270325.1.2.04-7266"
+                    "perdcomp": "08248.31024.270325.1.2.04-7266",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012235028342771'",
                     "valor": 2989.73,
-                    "perdcomp": "08729.87215.270325.1.2.04-3781"
+                    "perdcomp": "08729.87215.270325.1.2.04-3781",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10100107128083753'",
                     "valor": 781.72,
-                    "perdcomp": "08862.13592.270325.1.2.04-0086"
+                    "perdcomp": "08862.13592.270325.1.2.04-0086",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162222444655225'",
                     "valor": 4669.64,
-                    "perdcomp": "08862.41949.270325.1.2.04-9762"
+                    "perdcomp": "08862.41949.270325.1.2.04-9762",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012408027343990'",
                     "valor": 2724.56,
-                    "perdcomp": "09057.01954.270325.1.2.04-6142"
+                    "perdcomp": "09057.01954.270325.1.2.04-6142",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012232297211256'",
                     "valor": 577.23,
-                    "perdcomp": "09545.07988.270325.1.2.04-2895"
+                    "perdcomp": "09545.07988.270325.1.2.04-2895",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012408027344628'",
                     "valor": 498.02,
-                    "perdcomp": "09692.41492.270325.1.2.04-9711"
+                    "perdcomp": "09692.41492.270325.1.2.04-9711",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162132724254884'",
                     "valor": 933.15,
-                    "perdcomp": "10163.37115.270325.1.2.04-4194"
+                    "perdcomp": "10163.37115.270325.1.2.04-4194",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162212690508678'",
                     "valor": 732.91,
-                    "perdcomp": "10532.43386.270325.1.2.04-4450"
+                    "perdcomp": "10532.43386.270325.1.2.04-4450",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162132724254884'",
                     "valor": 4128.96,
-                    "perdcomp": "10575.56176.270325.1.2.04-7498"
+                    "perdcomp": "10575.56176.270325.1.2.04-7498",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707744061503'",
                     "valor": 4636.63,
-                    "perdcomp": "10753.99028.270325.1.2.04-6921"
+                    "perdcomp": "10753.99028.270325.1.2.04-6921",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162222444642220'",
                     "valor": 1011.75,
-                    "perdcomp": "11083.55885.270325.1.2.04-0270"
+                    "perdcomp": "11083.55885.270325.1.2.04-0270",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707788115121'",
                     "valor": 3175.86,
-                    "perdcomp": "11145.07743.270325.1.2.04-4785"
+                    "perdcomp": "11145.07743.270325.1.2.04-4785",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162132724254884'",
                     "valor": 4352.4,
-                    "perdcomp": "11616.83268.270325.1.2.04-7299"
+                    "perdcomp": "11616.83268.270325.1.2.04-7299",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012435569965198'",
                     "valor": 632.88,
-                    "perdcomp": "11777.69827.270325.1.2.04-3140"
+                    "perdcomp": "11777.69827.270325.1.2.04-3140",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707836139965'",
                     "valor": 4508.06,
-                    "perdcomp": "12193.78031.270325.1.2.04-8173"
+                    "perdcomp": "12193.78031.270325.1.2.04-8173",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10100406136000548'",
                     "valor": 792.43,
-                    "perdcomp": "12402.83740.270325.1.2.04-6975"
+                    "perdcomp": "12402.83740.270325.1.2.04-6975",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012430915761515'",
                     "valor": 3265.73,
-                    "perdcomp": "12518.06320.270325.1.2.04-2289"
+                    "perdcomp": "12518.06320.270325.1.2.04-2289",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707881156332'",
                     "valor": 837.95,
-                    "perdcomp": "13082.91890.270325.1.2.04-5133"
+                    "perdcomp": "13082.91890.270325.1.2.04-5133",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707964119054'",
                     "valor": 840.29,
-                    "perdcomp": "13110.82064.270325.1.2.04-1606"
+                    "perdcomp": "13110.82064.270325.1.2.04-1606",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707984113664'",
                     "valor": 1034.64,
-                    "perdcomp": "14122.82180.270325.1.2.04-8770"
+                    "perdcomp": "14122.82180.270325.1.2.04-8770",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10100406160000695'",
                     "valor": 997.1,
-                    "perdcomp": "14789.79686.270325.1.2.04-5059"
+                    "perdcomp": "14789.79686.270325.1.2.04-5059",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707766097842'",
                     "valor": 832.73,
-                    "perdcomp": "15089.96141.270325.1.2.04-1294"
+                    "perdcomp": "15089.96141.270325.1.2.04-1294",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012411021923014'",
                     "valor": 2955.05,
-                    "perdcomp": "15385.58251.270325.1.2.04-9805"
+                    "perdcomp": "15385.58251.270325.1.2.04-9805",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707724075334'",
                     "valor": 1050.71,
-                    "perdcomp": "16400.48309.270325.1.2.04-0053"
+                    "perdcomp": "16400.48309.270325.1.2.04-0053",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707943135579'",
                     "valor": 2980.41,
-                    "perdcomp": "17053.72265.270325.1.2.04-0902"
+                    "perdcomp": "17053.72265.270325.1.2.04-0902",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707903057446'",
                     "valor": 895.21,
-                    "perdcomp": "18255.59088.270325.1.2.04-5719"
+                    "perdcomp": "18255.59088.270325.1.2.04-5719",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162132724254884'",
                     "valor": 4306.87,
-                    "perdcomp": "18985.13071.270325.1.2.04-0069"
+                    "perdcomp": "18985.13071.270325.1.2.04-0069",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012235028343263'",
                     "valor": 647.76,
-                    "perdcomp": "20305.70641.270325.1.2.04-7343"
+                    "perdcomp": "20305.70641.270325.1.2.04-7343",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707724075332'",
                     "valor": 4849.46,
-                    "perdcomp": "21288.20684.270325.1.2.04-7413"
+                    "perdcomp": "21288.20684.270325.1.2.04-7413",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012232297210896'",
                     "valor": 2664.13,
-                    "perdcomp": "21618.84225.270325.1.2.04-3996"
+                    "perdcomp": "21618.84225.270325.1.2.04-3996",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707766097843'",
                     "valor": 3843.4,
-                    "perdcomp": "22163.29720.270325.1.2.04-9107"
+                    "perdcomp": "22163.29720.270325.1.2.04-9107",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10100107105061799'",
                     "valor": 689.61,
-                    "perdcomp": "22419.58900.270325.1.2.04-9871"
+                    "perdcomp": "22419.58900.270325.1.2.04-9871",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123708034119527'",
                     "valor": 756.61,
-                    "perdcomp": "22821.85843.270325.1.2.04-4934"
+                    "perdcomp": "22821.85843.270325.1.2.04-4934",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10100405799000593'",
                     "valor": 4624.65,
-                    "perdcomp": "23378.57296.270325.1.2.04-2690"
+                    "perdcomp": "23378.57296.270325.1.2.04-2690",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707922123669'",
                     "valor": 3554.66,
-                    "perdcomp": "23847.28949.270325.1.2.04-4745"
+                    "perdcomp": "23847.28949.270325.1.2.04-4745",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012223495000953'",
                     "valor": 3244.74,
-                    "perdcomp": "24259.58732.270325.1.2.04-8885"
+                    "perdcomp": "24259.58732.270325.1.2.04-8885",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "IRPJ DIVIDA ATIVA",
                     "situacao": "PENDENTE",
                     "darf": "7172119401705415'",
                     "valor": 2635.41,
-                    "perdcomp": "24550.32736.270325.1.2.04-1543"
+                    "perdcomp": "24550.32736.270325.1.2.04-1543",
+                    "dataRestituicao": null
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10100406089000512'",
                     "valor": 853.13,
-                    "perdcomp": "24631.57216.270325.1.2.04-1242"
+                    "perdcomp": "24631.57216.270325.1.2.04-1242",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012421112267761'",
                     "valor": 3800.79,
-                    "perdcomp": "24921.95608.270325.1.2.04-6182"
+                    "perdcomp": "24921.95608.270325.1.2.04-6182",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123708007139761'",
                     "valor": 3370.76,
-                    "perdcomp": "25531.98928.270325.1.2.04-0148"
+                    "perdcomp": "25531.98928.270325.1.2.04-0148",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162303952176933'",
                     "valor": 2554.85,
-                    "perdcomp": "26385.04842.270325.1.2.04-9960"
+                    "perdcomp": "26385.04842.270325.1.2.04-9960",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012502172005607'",
                     "valor": 632.86,
-                    "perdcomp": "27841.53720.270325.1.2.04-0630"
+                    "perdcomp": "27841.53720.270325.1.2.04-0630",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012502172005275'",
                     "valor": 2920.91,
-                    "perdcomp": "27943.34518.270325.1.2.04-1630"
+                    "perdcomp": "27943.34518.270325.1.2.04-1630",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10100406160000696'",
                     "valor": 4602.05,
-                    "perdcomp": "28446.42834.270325.1.2.04-6604"
+                    "perdcomp": "28446.42834.270325.1.2.04-6604",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012217110114444'",
                     "valor": 932.11,
-                    "perdcomp": "28997.32686.270325.1.2.04-8735"
+                    "perdcomp": "28997.32686.270325.1.2.04-8735",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "IRPJ DIVIDA ATIVA",
                     "situacao": "PENDENTE",
                     "darf": "7172119401705415'",
                     "valor": 5251.25,
-                    "perdcomp": "29271.18254.270325.1.2.04-6567"
+                    "perdcomp": "29271.18254.270325.1.2.04-6567",
+                    "dataRestituicao": null
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012423420879357'",
                     "valor": 657.73,
-                    "perdcomp": "29971.88087.270325.1.2.04-4139"
+                    "perdcomp": "29971.88087.270325.1.2.04-4139",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012214363545600'",
                     "valor": 816.24,
-                    "perdcomp": "30108.42298.270325.1.2.04-7024"
+                    "perdcomp": "30108.42298.270325.1.2.04-7024",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012223495000902'",
                     "valor": 703.02,
-                    "perdcomp": "30574.78834.270325.1.2.04-7956"
+                    "perdcomp": "30574.78834.270325.1.2.04-7956",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012226243685662'",
                     "valor": 926.93,
-                    "perdcomp": "30942.14102.270325.1.2.04-7985"
+                    "perdcomp": "30942.14102.270325.1.2.04-7985",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012421112267923'",
                     "valor": 823.49,
-                    "perdcomp": "31196.56577.270325.1.2.04-5079"
+                    "perdcomp": "31196.56577.270325.1.2.04-5079",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012432637935150'",
                     "valor": 3015.99,
-                    "perdcomp": "31267.24207.270325.1.2.04-8002"
+                    "perdcomp": "31267.24207.270325.1.2.04-8002",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123708034119528'",
                     "valor": 3492.08,
-                    "perdcomp": "31900.91777.270325.1.2.04-7200"
+                    "perdcomp": "31900.91777.270325.1.2.04-7200",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162121707529212'",
                     "valor": 3320.21,
-                    "perdcomp": "32445.65349.270325.1.2.04-2060"
+                    "perdcomp": "32445.65349.270325.1.2.04-2060",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162212690508678'",
                     "valor": 3382.66,
-                    "perdcomp": "32786.31667.270325.1.2.04-4632"
+                    "perdcomp": "32786.31667.270325.1.2.04-4632",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012423420878903'",
                     "valor": 3035.7,
-                    "perdcomp": "32952.26968.270325.1.2.04-5752"
+                    "perdcomp": "32952.26968.270325.1.2.04-5752",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012229121217650'",
                     "valor": 718.38,
-                    "perdcomp": "33020.10721.270325.1.2.04-5172"
+                    "perdcomp": "33020.10721.270325.1.2.04-5172",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162215379586918'",
                     "valor": 790.25,
-                    "perdcomp": "33472.89572.270325.1.2.04-6132"
+                    "perdcomp": "33472.89572.270325.1.2.04-6132",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012417325733168'",
                     "valor": 2896.51,
-                    "perdcomp": "33932.39935.270325.1.2.04-2236"
+                    "perdcomp": "33932.39935.270325.1.2.04-2236",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707964119055'",
                     "valor": 3878.33,
-                    "perdcomp": "34097.96500.270325.1.2.04-1330"
+                    "perdcomp": "34097.96500.270325.1.2.04-1330",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10100406089000513'",
                     "valor": 3937.5,
-                    "perdcomp": "34193.10679.270325.1.2.04-0193"
+                    "perdcomp": "34193.10679.270325.1.2.04-0193",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10100106999066190'",
                     "valor": 645.76,
-                    "perdcomp": "34243.64417.270325.1.2.04-0303"
+                    "perdcomp": "34243.64417.270325.1.2.04-0303",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707744061502'",
                     "valor": 1004.6,
-                    "perdcomp": "35091.60230.270325.1.2.04-4336"
+                    "perdcomp": "35091.60230.270325.1.2.04-4336",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012411021923146'",
                     "valor": 640.25,
-                    "perdcomp": "35139.10338.270325.1.2.04-8010"
+                    "perdcomp": "35139.10338.270325.1.2.04-8010",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707984113665'",
                     "valor": 4775.33,
-                    "perdcomp": "35621.39187.270325.1.2.04-9883"
+                    "perdcomp": "35621.39187.270325.1.2.04-9883",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707922123673'",
                     "valor": 770.17,
-                    "perdcomp": "36134.13958.270325.1.2.04-7521"
+                    "perdcomp": "36134.13958.270325.1.2.04-7521",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707812160195'",
                     "valor": 2863.76,
-                    "perdcomp": "36878.31357.270325.1.2.04-7907"
+                    "perdcomp": "36878.31357.270325.1.2.04-7907",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012217110113758'",
                     "valor": 4302.12,
-                    "perdcomp": "37063.92724.270325.1.2.04-1321"
+                    "perdcomp": "37063.92724.270325.1.2.04-1321",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10123707881156331'",
                     "valor": 3867.53,
-                    "perdcomp": "37118.58002.270325.1.2.04-7200"
+                    "perdcomp": "37118.58002.270325.1.2.04-7200",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012432637935630'",
                     "valor": 653.46,
-                    "perdcomp": "37227.27578.270325.1.2.04-0241"
+                    "perdcomp": "37227.27578.270325.1.2.04-0241",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "IRPJ DIVIDA ATIVA",
                     "situacao": "PENDENTE",
                     "darf": "7172119401705415'",
                     "valor": 9080.38,
-                    "perdcomp": "38553.15842.270325.1.2.04-0071"
+                    "perdcomp": "38553.15842.270325.1.2.04-0071",
+                    "dataRestituicao": null
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012405360763864'",
                     "valor": 2290.57,
-                    "perdcomp": "39300.44357.270325.1.2.04-5689"
+                    "perdcomp": "39300.44357.270325.1.2.04-5689",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012226243685360'",
                     "valor": 4278.14,
-                    "perdcomp": "40048.67925.270325.1.2.04-9491"
+                    "perdcomp": "40048.67925.270325.1.2.04-9491",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012426849281044'",
                     "valor": 296.49,
-                    "perdcomp": "40462.03849.270325.1.2.04-1566"
+                    "perdcomp": "40462.03849.270325.1.2.04-1566",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "IRPJ DIVIDA ATIVA",
                     "situacao": "PENDENTE",
                     "darf": "7172119401705415'",
                     "valor": 1644.09,
-                    "perdcomp": "40683.70404.280325.1.2.04-4087"
+                    "perdcomp": "40683.70404.280325.1.2.04-4087",
+                    "dataRestituicao": null
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "10100405799000592'",
                     "valor": 1002.02,
-                    "perdcomp": "41982.64726.270325.1.2.04-1311"
+                    "perdcomp": "41982.64726.270325.1.2.04-1311",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "COFINS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7162215379586918'",
                     "valor": 3647.36,
-                    "perdcomp": "42033.30830.270325.1.2.04-2881"
+                    "perdcomp": "42033.30830.270325.1.2.04-2881",
+                    "dataRestituicao": "20/06/2025"
                 }, {
                     "tributo": "PIS",
                     "situacao": "RESTITUÍDO",
                     "darf": "7012405360764038'",
                     "valor": 496.28,
-                    "perdcomp": "42636.36081.270325.1.2.04-0127"
+                    "perdcomp": "42636.36081.270325.1.2.04-0127",
+                    "dataRestituicao": "20/06/2025"
                 }],
                 simplesNacional: {
                     data: [{
@@ -1169,7 +1209,7 @@
                         regime: document.getElementById('regimeFilter').value,
                         tributo: document.getElementById('tributoFilter').value,
                         status: document.getElementById('statusFilter').value,
-                        dataRestituicao: document.getElementById('dataRestituicaoFilter').value,
+                        date: document.getElementById('dateFilter').value, // Save new filter state
                     },
                     sort: sortConfig
                 };
@@ -1184,7 +1224,7 @@
                     document.getElementById('regimeFilter').value = state.filters.regime || '';
                     document.getElementById('tributoFilter').value = state.filters.tributo || '';
                     document.getElementById('statusFilter').value = state.filters.status || '';
-                    document.getElementById('dataRestituicaoFilter').value = state.filters.dataRestituicao || '';
+                    document.getElementById('dateFilter').value = state.filters.date || ''; // Load new filter state
                     sortConfig = state.sort || {
                         column: 'valor',
                         direction: 'desc'
@@ -1198,7 +1238,7 @@
                 document.getElementById('regimeFilter').value = '';
                 document.getElementById('tributoFilter').value = '';
                 document.getElementById('statusFilter').value = '';
-                document.getElementById('dataRestituicaoFilter').value = '';
+                document.getElementById('dateFilter').value = ''; // Clear new filter
                 sortConfig = {
                     column: 'valor',
                     direction: 'desc'
@@ -1212,24 +1252,26 @@
                 const lucroPresumidoData = RAW_DATA.lucroPresumido.map(item => ({
                     ...item,
                     regime: 'Lucro Presumido',
-                    dataRestituicao: item.situacao === 'RESTITUÍDO' ? '20/06/2025' : ''
+                    dataRestituicao: item.situacao === 'RESTITUÍDO' ? "20/06/2025" : null // Set specific date or null
                 }));
 
-                // Process Simples Nacional data
+                // Process Simples Nacional data - todos os processos já estão restituídos
                 const simplesNacionalData = [];
                 const sn = RAW_DATA.simplesNacional;
                 sn.data.forEach((item, index) => {
                     const currentPerdcomp = sn.processos[index];
+                    // Create a single record for each Simples Nacional process
                     simplesNacionalData.push({
                         tributo: 'SIMPLES NACIONAL',
-                        situacao: 'RESTITUÍDO',
+                        situacao: 'RESTITUÍDO', // All Simples Nacional are restituted
                         valor: item.valor,
                         darf: sn.darfs[index] || 'N/A',
                         perdcomp: currentPerdcomp,
                         regime: 'Simples Nacional',
-                        dataRestituicao: '21/07/2025'
+                        dataRestituicao: "21/07/2025" // Specific date for Simples Nacional
                     });
                 });
+
                 masterData = [...lucroPresumidoData, ...simplesNacionalData];
             }
 
@@ -1442,7 +1484,7 @@
                         title: {
                             text: 'Valor (R$)',
                             style: {
-                                color: '#64748b',
+                                colors: '#64748b',
                                 fontSize: '12px'
                             }
                         }
@@ -1527,7 +1569,7 @@
                         title: {
                             text: 'Valor (R$)',
                             style: {
-                                color: '#64748b',
+                                colors: '#64748b',
                                 fontSize: '12px'
                             }
                         }
@@ -1593,8 +1635,6 @@
             }
 
             async function init() {
-                lucide.createIcons(); // Create icons once on initial load
-
                 initCharts(); // Initialize chart instances
 
                 processRawData();
@@ -1602,30 +1642,42 @@
                 loadState();
                 setupEventListeners();
                 applyFiltersAndRender();
-
-                // Force a redraw after initial load to fix rendering bugs
-                setTimeout(() => window.dispatchEvent(new Event('resize')), 300);
             }
 
             // --- DOM & EVENT HANDLING ---
             function populateFilters() {
-                const getUniqueValues = (key) => [...new Set(masterData.map(item => item[key]))].sort();
+                const getUniqueValues = (key) => {
+                    let values = [...new Set(masterData.map(item => item[key]))].filter(val => val !== null && val !== undefined && val !== '').sort();
+                    // For dataRestituicao, ensure it's sorted as dates if possible, or just alphabetically
+                    if (key === 'dataRestituicao') {
+                        values.sort((a, b) => {
+                            // Simple date string comparison for DD/MM/YYYY
+                            const [dayA, monthA, yearA] = a.split('/').map(Number);
+                            const [dayB, monthB, yearB] = b.split('/').map(Number);
+                            const dateA = new Date(yearA, monthA - 1, dayA);
+                            const dateB = new Date(yearB, monthB - 1, dayB);
+                            return dateA - dateB;
+                        });
+                    }
+                    return values;
+                };
+
                 const populateSelect = (elementId, values) => {
                     const select = document.getElementById(elementId);
                     // Preserve the first option (e.g., "Todos Regimes")
-                    const defaultOption = select.firstElementChild.outerHTML; 
+                    const defaultOption = select.firstElementChild.outerHTML;
                     select.innerHTML = defaultOption;
                     values.forEach(value => select.add(new Option(value, value)));
                 };
                 populateSelect('regimeFilter', getUniqueValues('regime'));
                 populateSelect('tributoFilter', getUniqueValues('tributo'));
                 populateSelect('statusFilter', getUniqueValues('situacao'));
-                populateSelect('dataRestituicaoFilter', getUniqueValues('dataRestituicao').filter(v => v));
+                populateSelect('dateFilter', getUniqueValues('dataRestituicao')); // Populate new date filter
             }
 
             function setupEventListeners() {
                 let filterTimeout;
-                document.querySelectorAll('#searchInput, #regimeFilter, #tributoFilter, #statusFilter, #dataRestituicaoFilter').forEach(el => {
+                document.querySelectorAll('#searchInput, #regimeFilter, #tributoFilter, #statusFilter, #dateFilter').forEach(el => {
                     el.addEventListener('input', () => {
                         clearTimeout(filterTimeout);
                         filterTimeout = setTimeout(applyFiltersAndRender, 500);
@@ -1661,16 +1713,16 @@
                     regime: document.getElementById('regimeFilter').value,
                     tributo: document.getElementById('tributoFilter').value,
                     status: document.getElementById('statusFilter').value,
-                    dataRestituicao: document.getElementById('dataRestituicaoFilter').value,
+                    date: document.getElementById('dateFilter').value, // Get new filter value
                 };
 
                 filteredData = masterData.filter(item => {
                     if (filters.regime && item.regime !== filters.regime) return false;
                     if (filters.tributo && item.tributo !== filters.tributo) return false;
                     if (filters.status && item.situacao !== filters.status) return false;
-                    if (filters.dataRestituicao && item.dataRestituicao !== filters.dataRestituicao) return false;
+                    if (filters.date && item.dataRestituicao !== filters.date) return false; // Apply new filter
                     if (filters.search) {
-                        const searchStr = String(item.tributo + ' ' + item.situacao + ' ' + item.regime + ' ' + item.perdcomp).toLowerCase();
+                        const searchStr = [item.tributo, item.situacao, item.regime, item.perdcomp, item.dataRestituicao].map(s => s || '').join(' ').toLowerCase();
                         if (!searchStr.includes(filters.search)) return false;
                     }
                     return true;
@@ -1681,8 +1733,21 @@
                     filteredData.sort((a, b) => {
                         const col = sortConfig.column;
                         const dir = sortConfig.direction === 'asc' ? 1 : -1;
-                        const valA = a[col];
-                        const valB = b[col];
+                        let valA = a[col];
+                        let valB = b[col];
+
+                        // Special handling for date sorting
+                        if (col === 'dataRestituicao') {
+                            const parseDate = (dateStr) => {
+                                if (!dateStr) return new Date(0); // Treat null/empty dates as very old
+                                const [day, month, year] = dateStr.split('/').map(Number);
+                                return new Date(year, month - 1, day);
+                            };
+                            valA = parseDate(valA);
+                            valB = parseDate(valB);
+                            return (valA.getTime() - valB.getTime()) * dir;
+                        }
+
                         if (typeof valA === 'number') return (valA - valB) * dir;
                         return String(valA).localeCompare(String(valB)) * dir;
                     });
@@ -1732,7 +1797,9 @@
                 let newTributeSeries = [];
                 let newTributeLabels = [];
                 if (filteredData.length > 0) {
-                    const tributeData = filteredData.reduce((acc, item) => {
+                    // Filter data to ensure 'tributo' is defined before reducing
+                    const validTributeData = filteredData.filter(item => item && item.tributo);
+                    const tributeData = validTributeData.reduce((acc, item) => {
                         const valor = parseFloat(item.valor) || 0;
                         acc[item.tributo] = ensureFinite((acc[item.tributo] || 0) + valor);
                         return acc;
@@ -1740,7 +1807,6 @@
                     const validTributes = Object.entries(tributeData)
                         .filter(([, value]) => value > 0)
                         .sort(([,a], [,b]) => b - a);
-                    // Garante que os valores são sempre números
                     newTributeSeries = validTributes.map(([, value]) => Number(ensureFinite(Math.round(value * 100) / 100)));
                     newTributeLabels = validTributes.map(([key]) => key);
                 }
@@ -1775,7 +1841,9 @@
                 let newStatusSeries = [{ name: 'Restituído', data: [] }, { name: 'Pendente', data: [] }];
                 let newStatusCategories = [];
                 if (filteredData.length > 0) {
-                    const statusByTribute = filteredData.reduce((acc, item) => {
+                    // Filter data to ensure 'tributo' and 'situacao' are defined before reducing
+                    const validStatusData = filteredData.filter(item => item && item.tributo && item.situacao);
+                    const statusByTribute = validStatusData.reduce((acc, item) => {
                         const tribute = item.tributo;
                         const valor = parseFloat(item.valor) || 0;
                         if (!acc[tribute]) {
@@ -1809,7 +1877,9 @@
                 let newRegimeSeries = [{ name: 'Restituído', data: [] }, { name: 'Pendente', data: [] }];
                 let newRegimeCategories = [];
                 if (filteredData.length > 0) {
-                    const regimeData = filteredData.reduce((acc, item) => {
+                    // Filter data to ensure 'regime' and 'situacao' are defined before reducing
+                    const validRegimeData = filteredData.filter(item => item && item.regime && item.situacao);
+                    const regimeData = validRegimeData.reduce((acc, item) => {
                         const valor = parseFloat(item.valor) || 0;
                         if (!acc[item.regime]) {
                             acc[item.regime] = { 'RESTITUÍDO': 0, 'PENDENTE': 0 };
@@ -1849,6 +1919,7 @@
                     const statusClass = item.situacao === 'RESTITUÍDO' ?
                         'bg-emerald-100 text-emerald-800' :
                         'bg-amber-100 text-amber-800';
+                    const dataRestituicaoDisplay = item.dataRestituicao ? item.dataRestituicao : 'N/A';
                     return `
                         <tr class="border-b border-slate-200/80 hover:bg-slate-50 transition-colors">
                             <td class="p-4 text-sm font-medium text-slate-800">${item.tributo}</td>
@@ -1856,7 +1927,7 @@
                             <td class="p-4 text-right font-mono text-sm text-slate-600">${formatCurrency(item.valor)}</td>
                             <td class="p-4 text-sm text-slate-600">${item.regime}</td>
                             <td class="p-4 font-mono text-xs text-slate-500">${item.perdcomp}</td>
-                            <td class="p-4 text-xs text-slate-600">${item.dataRestituicao || '-'}</td>
+                            <td class="p-4 text-sm text-slate-600">${dataRestituicaoDisplay}</td>
                         </tr>
                     `;
                 }).join('');
@@ -1896,6 +1967,17 @@
             // --- START THE APPLICATION ---
             init();
         });
+
+        // Ensure lucide.createIcons() is called after the entire page is loaded
+        window.onload = function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                console.error("Lucide library not loaded. Icons may not appear.");
+            }
+            // Force a redraw after initial load to fix rendering bugs
+            setTimeout(() => window.dispatchEvent(new Event('resize')), 300);
+        };
     </script>
 </body>
 
