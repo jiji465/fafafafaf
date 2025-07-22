@@ -288,6 +288,30 @@
                 font-size: 12px;
                 padding: 6px;
             }
+            #dataTable {
+                display: block;
+                overflow-x: auto;
+                width: 100%;
+            }
+            #dataTable thead, #dataTable tbody, #dataTable tr {
+                display: table;
+                width: 100%;
+                table-layout: fixed;
+            }
+            #dataTable th, #dataTable td {
+                white-space: normal;
+                word-break: break-word;
+            }
+        }
+        @media (max-width: 600px) {
+            #dataTable th, #dataTable td {
+                font-size: 10px;
+                padding: 4px;
+            }
+            .status-badge {
+                font-size: 9px;
+                padding: 2px 6px;
+            }
         }
     </style>
 </head>
